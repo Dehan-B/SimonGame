@@ -22,6 +22,12 @@ $(document).on("keydown", function(event) {
     }
 });
 
+$(".btn-secondary").on("click", function() {
+    startOver();
+    $("h1").text("Level " + level);
+    nextSequence();
+});
+
 function nextSequence() {
     userClickedPattern = [];
 
@@ -81,4 +87,5 @@ function startOver() {
     level = 0;
     gamePattern = [];
     $("body").removeClass("game-over");
+
 }
